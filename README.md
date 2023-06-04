@@ -1,4 +1,4 @@
-# Star Wars GraphQL API
+# Star Wars GraphQL Server
 
 Este es un ejemplo del uso de GraphQL en servidor haciendo uso del [API de Star Wars (SWAPI)](https://swapi.dev/).
 
