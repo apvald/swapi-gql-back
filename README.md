@@ -2,13 +2,14 @@
 
 Este es un ejemplo del uso de GraphQL en servidor haciendo uso del [API de Star Wars (SWAPI)](https://swapi.dev/).
 
-Solo se ha configurado para el uso de 2 queries por ser de uso para un test. 
+Solo se ha configurado para el uso de 2 queries por ser de uso para un test.
 
 ## Instalar dependencias
 
 ```bash
 yarn install
 ```
+
 ```bash
 npm install
 ```
@@ -18,6 +19,7 @@ npm install
 ```bash
 yarn dev
 ```
+
 ```bash
 npm run dev
 ```
@@ -27,6 +29,7 @@ npm run dev
 ```bash
 yarn build
 ```
+
 ```bash
 npm run build
 ```
@@ -36,6 +39,50 @@ npm run build
 ```bash
 yarn start
 ```
+
 ```bash
 npm start
+```
+
+## Queries
+
+Consulta lista de personajes
+
+```gql
+query Query {
+  listPeople {
+    id
+    name
+    homeworld {
+      name
+    }
+    species {
+      name
+    }
+  }
+}
+```
+
+Consulta por información de un personaje
+
+```gql
+query Person {
+  person(id: "1") {
+    id
+    name
+    hair_color
+    skin_color
+    eye_color
+    birth_year
+    species {
+      name
+    }
+    homeworld {
+      name
+    }
+    vehicles {
+      name
+    }
+  }
+}
 ```
